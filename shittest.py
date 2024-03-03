@@ -36,3 +36,12 @@ print(f"the discount is {(hr_invoiced * hr_rate) - product}")
 # #JESUS CHRIST IT WORKED FIRST TIME! CODED FROM SCRATCH!!
 # =============================================================================
 #^right before I pushed this... I created something above with a hotkey. I don't remember how I did it?^
+#I still need to implement this 
+"""
+After printing an invoice, ask the user if they want to continue and enter another set of data (Y or N).
+Your program should loop as long as the response is a Y or a y.
+Sample Execution
+Below is shown a screen capture of what the program would look like if I ran it with two sets of input
+data. The values in YELLOW are what were entered by the user in this example execution.
+
+"""
