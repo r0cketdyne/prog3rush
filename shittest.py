@@ -16,7 +16,16 @@ discount = (float(input("Enter your discount code")))
 
 product = hr_invoiced * hr_rate
 
-print(f"the actual bill amount, sans discount is {product}")
+if discount == 1:
+    product *= .10
+elif discount == 2:
+    product *= .12
+elif discount == 3:
+    product *= 15
+else:
+    print(f"the actual bill amountis {product}")
+    
+print(f"the discount is {product}")
 #we have stored the data. this was ridiculously easy, obviously. Now we need to manipulate it
 
 #for some reason I ran into some syntax errors above. It was bc unmatched parenth. obvious. 
