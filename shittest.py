@@ -32,3 +32,7 @@ print(f"the discount is {(hr_invoiced * hr_rate) - product}")
 
 #ok I have NOT ran this. but I'm guessing that maths can be done within {} constraints so lets cross
 #our fingers. this should run flawlessly in principle!
+# =============================================================================
+# #JESUS CHRIST IT WORKED FIRST TIME! CODED FROM SCRATCH!!
+# =============================================================================
+#^right before I pushed this... I created something above with a hotkey. I don't remember how I did it?^
