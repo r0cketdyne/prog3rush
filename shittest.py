@@ -21,11 +21,22 @@ if discount == 1:
 elif discount == 2:
     product *= .12
 elif discount == 3:
-    product *= 15
+    product *= .15
 else:
     print(f"the discount is {(hr_invoiced * hr_rate) - product}") #for some reason this is just giving me gross? tf?
     
 print(f"the discount is {(hr_invoiced * hr_rate) - product}")
+
+
+"""
+cont = input("Do you want to continue? Enter Y for yes or N for no")
+
+
+if cont == "Y":
+    #execute control struct
+else: #terminate program
+"""
+
 #we have stored the data. this was ridiculously easy, obviously. Now we need to manipulate it
 
 #for some reason I ran into some syntax errors above. It was bc unmatched parenth. obvious. 
