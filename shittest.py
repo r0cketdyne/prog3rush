@@ -26,12 +26,13 @@ while True:
         print("Invalid discount code")
 
     gross_amount = (hr_invoiced * hr_rate) - product
-# Calculate and print the gross bill amount
+# Calculate and print the gross bill amount to the terminal emulator at the standard i/o
     print(f"The gross bill amount is {gross_amount}")
 
     user_input = input("Do you want to enter another set of data? (Y/N): ")
-# Ask the user if they want to continue
+# Ask the user if they want to continue. log this output to standard i/o
     if user_input.lower() != 'y':
+#I implemented the use of the .lower method here. which takes Y, which is transformed into y and checks if it is indeed y.
         break
 # Exit the loop if the user enters anything other than 'Y' or 'y'
 
