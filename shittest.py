@@ -1,4 +1,7 @@
-
+# Program 3 -- File: Program3.py
+# MATTHEW STEPHENSON 3/02/2024
+# This program will compute an invoice based on values entered by the user.
+###########################################################
 
 while True:
 #we will implement a while loop to keep prompting the usr for input until they choose not to continue.
@@ -31,5 +34,8 @@ while True:
     if user_input.lower() != 'y':
         break
 # Exit the loop if the user enters anything other than 'Y' or 'y'
+
+#ps: I will still probably implement a kind of GUI, just wanted something
+#functional uploaded to canvas just in case...
 
 
