@@ -1,9 +1,9 @@
 #cleaned everything up.
 
 while True:
-    hr_invoiced = float(input("Enter hours invoiced: "))
-    hr_rate = float(input('Enter the hourly rate: '))
-    discount = float(input("Enter your discount code (1, 2, 3): "))
+    hr_invoiced = float(input("Please enter hours invoiced: "))
+    hr_rate = float(input('Please enter the hourly rate: '))
+    discount = float(input("Please enter your discount code (1, 2, 3): "))
 
     product = hr_invoiced * hr_rate
 
