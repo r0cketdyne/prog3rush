@@ -26,8 +26,9 @@ def calculate_invoice(hours, rate, discount_code):
     return result_text
 
 def main():
+ #this is our main function. as defined by def main.
     print("Welcome to the invoice calculator.")
-
+#welcoming the user with text logged to standard i/o
     while True:
         try:
             hours_invoiced = float(input("Please enter the hours invoiced: "))
