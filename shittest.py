@@ -9,6 +9,7 @@ The user provides a discount code of 1, 2, or 3. 1 is 10% discount, 2 is 12% dis
 Any other value results in a discount of 0.0.
 An invoice must be printed to the screen.
 """
+import sys
 
 hr_invoiced = (float(input("Enter hours invoiced\n")))  # takes string from user and ensures it's a float
 hr_rate = (float(input('Enter the hourly rate\n')))  # takes string from the user; transforms it into a float
@@ -22,11 +23,15 @@ elif discount == 2:
     product *= .12
 elif discount == 3:
     product *= .15
+elif discount == 0: 
+    print("the gross bill amount is ", product)
+    sys.exit()
 else:
-    print(product)#ok... this will probably work. havent run yet
+    print("Invalid discount code")
     
 print(f"the gross bill amount is {(hr_invoiced * hr_rate) - product}")
-
+#Im definitely doing math in the print statement here. I could do this another way, but this appears 
+#to be legal in Python. so yay
 
 """
 cont = input("Do you want to continue? Enter Y for yes or N for no")
