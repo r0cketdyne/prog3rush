@@ -10,8 +10,9 @@ Any other value results in a discount of 0.0.
 An invoice must be printed to the screen.
 """
 
-hr_invoiced = (float(input("Enter hours invoiced")))  # takes string from user and ensures it's a float
-hr_rate = (float(input('Enter the hourly rate')))  # takes string from the user; transforms it into a float
+hr_invoiced = (float(input("Enter hours invoiced\n")))  # takes string from user and ensures it's a float
+hr_rate = (float(input('Enter the hourly rate\n')))  # takes string from the user; transforms it into a float
+discount = (float(input("Enter your discount code")))
 
 product = hr_invoiced * hr_rate
 
