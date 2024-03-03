@@ -2,41 +2,50 @@
 # MATTHEW STEPHENSON 3/02/2024
 # This program will compute an invoice based on values entered by the user.
 ###########################################################
+def calculate_invoice(hours, rate, discount_code):
+    gross_invoice = hours * rate
 
-while True:
-#we will implement a while loop to keep prompting the usr for input until they choose not to continue.
-    hr_invoiced = float(input("Please enter hours invoiced: "))
-    hr_rate = float(input('Please enter the hourly rate: '))
-    discount = float(input("Please enter your discount code (1, 2, 3): "))
-
-    product = hr_invoiced * hr_rate
-
-    if discount == 1:
-        product *= 0.10
-# 10% discount
-    elif discount == 2:
-        product *= 0.12
- # 12% discount
-    elif discount == 3:
-        product *= 0.15
-# 15% discount
-    elif discount == 0:
-        print("The gross bill amount is ", product)
+    if discount_code == 1:
+        discount = 0.10 * gross_invoice
+    elif discount_code == 2:
+        discount = 0.12 * gross_invoice
+    elif discount_code == 3:
+        discount = 0.15 * gross_invoice
     else:
-        print("Invalid discount code")
+        discount = 0.00
 
-    gross_amount = (hr_invoiced * hr_rate) - product
-# Calculate and print the gross bill amount to the terminal emulator at the standard i/o
-    print(f"The gross bill amount is {gross_amount}")
+    net_invoice = gross_invoice - discount
 
-    user_input = input("Do you want to enter another set of data? (Y/N): ")
-# Ask the user if they want to continue. log this output to standard i/o
-    if user_input.lower() != 'y':
-#I implemented the use of the .lower method here. which takes Y, which is transformed into y and checks if it is indeed y.
-        break
-# Exit the loop if the user enters anything other than 'Y' or 'y'
+    result_text = f"------------------- INVOICE -------------------------\n" \
+                  f"Hours Invoiced: {hours} Hourly Rate: $ {rate:.2f}\n" \
+                  f"Gross Invoice: $ {gross_invoice:.2f}\n" \
+                  f"Discount: $ {discount:.2f} (Discount Code {int(discount_code)})\n" \
+                  f"Net Invoice: $ {net_invoice:.2f} (Pay This Amount)\n" \
+                  f"------------------ END INVOICE ----------------------"
+#yay GUI's!
+    return result_text
 
-#ps: I will still probably implement a kind of GUI, just wanted something
-#functional uploaded to canvas just in case...
-#well, I don't want to use a library not native to python so I guess we're hard coding it...LMAO
+def main():
+    print("Welcome to the invoice calculator.")
 
+    while True:
+        try:
+            hours_invoiced = float(input("Please enter the hours invoiced: "))
+            hourly_rate = float(input("Please enter the hourly invoice rate: "))
+            discount_code = float(input("Please enter the discount code (1=10%, 2=12%, 3=15%): "))
+
+            result = calculate_invoice(hours_invoiced, hourly_rate, discount_code)
+            print(result)
+
+            another_invoice = input("Would you like to compute another Invoice [Y/N]? ").lower()
+            if another_invoice != 'y':
+                print("End Program 2. Goodbye.")
+                break
+        except ValueError:
+            print("Invalid input. Please enter valid numeric values.")
+
+if __name__ == "__main__":
+    main()
+
+#needs to be extensively commented
+#this is actually functional
