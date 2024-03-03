@@ -23,9 +23,12 @@ elif discount == 2:
 elif discount == 3:
     product *= 15
 else:
-    print(f"the discount is {product}") #for some reason this is just giving me gross? tf?
+    print(f"the discount is {(hr_invoiced * hr_rate) - product}") #for some reason this is just giving me gross? tf?
     
-print(f"the discount is {product}")
+print(f"the discount is {(hr_invoiced * hr_rate) - product}")
 #we have stored the data. this was ridiculously easy, obviously. Now we need to manipulate it
 
 #for some reason I ran into some syntax errors above. It was bc unmatched parenth. obvious. 
+
+#ok I have NOT ran this. but I'm guessing that maths can be done within {} constraints so lets cross
+#our fingers. this should run flawlessly in principle!
