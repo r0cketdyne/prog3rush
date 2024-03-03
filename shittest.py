@@ -14,3 +14,6 @@ hr_invoiced = (float(input("Enter hours invoiced")))  # takes string from user a
 hr_rate = (float(input('Enter the hourly rate')))  # takes string from the user; transforms it into a float
 
 print(hr_invoiced)
+#we have stored the data. this was ridiculously easy, obviously. Now we need to manipulate it
+
+#for some reason I ran into some syntax errors above. It was bc unmatched parenth. obvious. 
