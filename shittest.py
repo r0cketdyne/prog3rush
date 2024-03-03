@@ -23,7 +23,7 @@ elif discount == 2:
 elif discount == 3:
     product *= .15
 else:
-    print(f"the discount is {(hr_invoiced * hr_rate) - product}") #for some reason this is just giving me gross? tf?
+    print(f"the discount is {product-(hr_invoiced * hr_rate)}") #ok... this will probably work. havent run yet
     
 print(f"the discount is {(hr_invoiced * hr_rate) - product}")
 
