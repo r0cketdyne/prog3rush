@@ -12,7 +12,7 @@ An invoice must be printed to the screen.
 
 hr_invoiced = (float(input("Enter hours invoiced\n")))  # takes string from user and ensures it's a float
 hr_rate = (float(input('Enter the hourly rate\n')))  # takes string from the user; transforms it into a float
-discount = (float(input("Enter your discount code")))
+discount = (float(input("Enter your discount code\n")))
 
 product = hr_invoiced * hr_rate
 
@@ -23,7 +23,7 @@ elif discount == 2:
 elif discount == 3:
     product *= 15
 else:
-    print(f"the actual bill amountis {product}")
+    print(f"the discount is {product}") #for some reason this is just giving me gross? tf?
     
 print(f"the discount is {product}")
 #we have stored the data. this was ridiculously easy, obviously. Now we need to manipulate it
