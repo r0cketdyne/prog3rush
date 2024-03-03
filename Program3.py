@@ -40,7 +40,7 @@ def main():
 
             another_invoice = input("Would you like to compute another Invoice [Y/N]? ").lower()
             if another_invoice != 'y':
-                print("End Program 2. Goodbye.")
+                print("End Program. Goodbye.")
                 break
         except ValueError:
             print("Invalid input. Please enter valid numeric values.")
